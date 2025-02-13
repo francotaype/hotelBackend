@@ -69,8 +69,11 @@ A hotel reservation web API built with **Spring Boot** and **MySQL**. The API al
         spring.datasource.password=root
         spring.security.user.name=admin
         spring.security.user.password=adminpassword
+         JWT_SECRET=9dhjfsd78sdf8d7f9sdf9dsf8ds7f9sdf98sd7f9ds8f7d8f7sd9f8sd7f9d8fs7d89f7sd8f7ds89fsd8f7ds8f7dsf9d
+         JWT_EXPIRATION_MS=86400000
 
-4. Run the application:
+
+5. Run the application:
 
         mvn clean package -DskipTests
     
