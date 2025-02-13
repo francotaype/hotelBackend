@@ -41,19 +41,18 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable) // Deshabilitar CSRF
                 .cors(cors -> cors.configurationSource(corsConfigurationSource())) // Habilitar CORS
                 .exceptionHandling(exceptionHandling -> exceptionHandling
-                        .authenticationEntryPoint(unauthorizedHandler) // Manejo de excepciones
+                        .authenticationEntryPoint(unauthorizedHandler)
                 )
                 .sessionManagement(sessionManagement -> sessionManagement
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Sesiones sin estado
                 )
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/api/auth/**").permitAll() // Permitir acceso público a estos endpoints
-                        .requestMatchers("/api/**").permitAll() // Permitir acceso público a la API
+                        .requestMatchers("/api/auth/signin").permitAll()
                         .requestMatchers("/swagger-ui/**").permitAll() // Permitir acceso público a Swagger UI
-                        .requestMatchers("/v3/api-docs/**").permitAll() // Permitir acceso público a la documentación de la API
-                        .anyRequest().authenticated() // Cualquier otra solicitud requiere autenticación
+                        .requestMatchers("/v3/api-docs/**").permitAll()
+                        .anyRequest().authenticated()
                 )
-                .addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class); // Agregar filtro JWT
+                .addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
