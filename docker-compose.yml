@@ -11,6 +11,8 @@ services:
       DB_PASSWORD: ${DB_PASSWORD}
       SECURITY_USER_NAME: ${SECURITY_USER_NAME}
       SECURITY_USER_PASSWORD: ${SECURITY_USER_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRATION_MS: ${JWT_EXPIRATION_MS}
     restart: always
     depends_on:
       hotel_db:
