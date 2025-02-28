@@ -24,7 +24,7 @@ public class EmployeeRequestDTO {
     private String lastName;
 
     @NotEmpty(message = "El telefono no puede estar vacío")
-    private String telefono;
+    private String phone;
 
 
     @JsonProperty("empresa_id")

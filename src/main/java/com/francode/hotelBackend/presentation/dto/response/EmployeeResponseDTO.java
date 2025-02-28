@@ -12,7 +12,7 @@ public class EmployeeResponseDTO {
     private String documentNumber;
     private String name;
     private  String lastName;
-    private String telefono;
+    private String phone;
     private String companyId;
     private String userId;
 }

@@ -31,8 +31,8 @@ public class Employee {
     @Column(name = "apellido", nullable = false, length = 100)
     private String lastName;
 
-    @Column(name = "contacto", nullable = false, unique = true, length = 150)
-    private String telefono;
+    @Column(name = "telefono", nullable = true, length = 20)
+    private String phone;
 
     @ManyToOne
     @JoinColumn(name = "empresa_id", nullable = false)
