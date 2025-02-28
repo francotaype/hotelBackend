@@ -34,11 +34,12 @@ public class Employee {
     @Column(name = "contacto", nullable = false, unique = true, length = 150)
     private String contact;
 
-    @Column(name = "contrasena", nullable = false, length = 100)
-    private String password;
-
     @ManyToOne
     @JoinColumn(name = "empresa_id", nullable = false)
     private Company company;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private UserApp userApp;
 }
 
