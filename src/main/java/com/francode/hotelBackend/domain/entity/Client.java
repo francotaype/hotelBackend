@@ -30,7 +30,7 @@ public class Client {
     @Column(name = "nombre", nullable = false, length = 100)
     private String name;
 
-    @Column(name = "correo", nullable = false, unique = true, length = 255)
-    private String email;
+    @Column(name = "telefono", nullable = true, length = 255)
+    private String phone;
 }
 

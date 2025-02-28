@@ -12,5 +12,5 @@ public class ClientResponseDTO {
     private String documentType;
     private String documentNumber;
     private String name;
-    private String email;
+    private String phone;
 }

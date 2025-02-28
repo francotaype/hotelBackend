@@ -23,8 +23,7 @@ public class ClientRequestDTO {
     @NotEmpty(message = "El nombre no puede estar vacío")
     private String name;
 
-    @Email(message = "Formato de correo electrónico inválido")
-    @NotEmpty(message = "El correo electrónico no puede estar vacío")
-    private String email;
+    @NotEmpty(message = "El telefono no puede estar vacío")
+    private String phone;
 }
 
