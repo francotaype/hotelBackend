@@ -8,10 +8,11 @@ import lombok.Setter;
 public class EmployeeResponseDTO {
 
     private Long id;
-    private String documenttype;
+    private String documentType;
     private String documentNumber;
     private String name;
     private  String lastName;
     private String contact;
     private String companyName;
+    private String userId;
 }

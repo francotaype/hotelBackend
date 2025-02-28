@@ -33,5 +33,8 @@ public class EmployeeRequestDTO {
 
     @JsonProperty("empresa_id")
     private Long company_id;
+
+    @JsonProperty("usuario_id")
+    private Long user_id;
 }
 
