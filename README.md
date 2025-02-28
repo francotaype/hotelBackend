@@ -31,15 +31,20 @@ A hotel reservation web API built with **Spring Boot** and **MySQL**. The API al
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/francotaype/hotelBacked.git
+   git clone https://github.com/francotaype/hotelBackend.git
    cd hotelBacked
 
 2.  Create the .env file in the root of the project with the following environment variables:
     ```bash
     DB_USER_NAME=root
-    DB_PASSWORD=root
+    DB_PASSWORD=1234
+    MYSQL_ROOT_PASSWORD=1234
+    MYSQL_PASSWORD=1234
     SECURITY_USER_NAME=admin
     SECURITY_USER_PASSWORD=adminpassword
+
+    JWT_SECRET=9dhjfsd78sdf8d7f9sdf9dsf8ds7f9sdf98sd7f9ds8f7d8f7sd9f8sd7f9d8fs7d89f7sd8f7ds89fsd8f7ds8f7dsf9d
+    JWT_EXPIRATION_MS=86400000
 
 
 3. Build and start the containers with Docker Compose:
@@ -55,7 +60,7 @@ A hotel reservation web API built with **Spring Boot** and **MySQL**. The API al
 
   1. Clone the repository:
 
-    git clone https://github.com/francotaype/hotelBacked.git
+    git clone https://github.com/francotaype/hotelBackend.git
     cd hotelBacked
 
 
@@ -69,8 +74,8 @@ A hotel reservation web API built with **Spring Boot** and **MySQL**. The API al
         spring.datasource.password=root
         spring.security.user.name=admin
         spring.security.user.password=adminpassword
-         JWT_SECRET=9dhjfsd78sdf8d7f9sdf9dsf8ds7f9sdf98sd7f9ds8f7d8f7sd9f8sd7f9d8fs7d89f7sd8f7ds89fsd8f7ds8f7dsf9d
-         JWT_EXPIRATION_MS=86400000
+        JWT_SECRET=9dhjfsd78sdf8d7f9sdf9dsf8ds7f9sdf98sd7f9ds8f7d8f7sd9f8sd7f9d8fs7d89f7sd8f7ds89fsd8f7ds8f7dsf9d
+        JWT_EXPIRATION_MS=86400000
 
 
 5. Run the application:
